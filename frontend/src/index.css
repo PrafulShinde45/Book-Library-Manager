@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F9E4BC !important;
+    color: #111827;
+  }
+  
+  html {
+    background-color: #eec67c !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    background-color: #6B3F1D; /* Dark brown */
+    /* Remove Tailwind's bg-primary-600 and hover:bg-primary-700 */
+  }
+  .btn-primary:hover {
+    background-color: #4E2E13; /* Even darker brown on hover */
+  }
+  .btn-primary:focus {
+    box-shadow: 0 0 0 2px #A47551; /* Brownish focus ring */
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+}
